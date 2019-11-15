@@ -22,9 +22,10 @@ export class BrowserCore extends App {
   }
 }
 
-prefs.set('developer', NativeModules.Constants.isDebug || NativeModules.Constants.isCI);
-
-const app = new BrowserCore(global.browser);
+const app = new App({
+  browser: global.browser,
+  debug: NativeModules.Constants.isDebug || NativeModules.Constants.isCI
+});
 const appReady = app.start();
 
 global.CLIQZ = {
