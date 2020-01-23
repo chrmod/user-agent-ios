@@ -9,11 +9,13 @@
 import UIKit
 import Shared
 import Storage
+import UserAgentViews
 
 /// Displays Top Sites and Pinned Sites in a React Native View
 class TopSitesView: UIView {
     // MARK: - Properties
     var profile: Profile
+    var testView: TestView?
 
     private var homeView: HomeView?
 
